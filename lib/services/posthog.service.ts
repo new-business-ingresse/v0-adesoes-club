@@ -19,7 +19,7 @@ export async function fetchSurveyResponses(): Promise<PostHogSurveyResponse[]> {
   `;
 
   const response = await fetch(
-    `${POSTHOG_API_URL}/api/environments/${PROJECT_ID}/query/`,
+    `${POSTHOG_API_URL}/api/projects/${PROJECT_ID}/query/`,
     {
       method: 'POST',
       headers: {
